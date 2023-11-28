@@ -1,0 +1,69 @@
+.footer-magro {
+  width: 100%;
+  border-top: 1px solid rgba(0, 0, 0, 0.14);
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include adaptiv-value("padding-top", 30, 20, 1);
+    @include adaptiv-value("padding-bottom", 30, 20, 1);
+    @media (max-width: 900px) {
+      column-gap: 20px;
+      align-items: flex-start;
+    }
+  }
+
+  &__logo {
+    @include adaptiv-value("width", 197, 180, 1);
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__menu {
+    width: fit-content;
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include adaptiv-value("column-gap", 40, 0, 1);
+    @media (max-width: 900px) {
+      column-gap: 0;
+      flex-direction: column;
+      align-items: flex-start;
+      row-gap: 20px;
+    }
+  }
+
+  &__social-item {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    cursor: pointer;
+  }
+
+  &__social-icon {
+    flex: 0 0 auto;
+    @include adaptiv-value("width", 24, 20, 1);
+    @include adaptiv-value("height", 24, 20, 1);
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__social-text {
+    font-weight: 400;
+    color: #333333;
+    @include adaptiv-value("font-size", 16, 12, 1);
+    @include adaptiv-value("line-height", 19, 14, 1);
+  }
+}

@@ -1,0 +1,28 @@
+.copyright-magro {
+  width: 100%;
+  background: #f5f5f5;
+  @include adaptiv-value("padding-top", 20, 10, 1);
+  @include adaptiv-value("padding-bottom", 20, 10, 1);
+  &__container {
+    display: flex;
+    align-items: center;
+    @media (max-width: 900px) {
+      justify-content: center;
+    }
+  }
+  &__text {
+    br {
+      display: none;
+    }
+    @media (max-width: 900px) {
+      br {
+        display: block;
+      }
+    }
+    font-weight: 400;
+    @include adaptiv-value("font-size", 14, 10, 1);
+    @include adaptiv-value("line-height", 16, 12, 1);
+    text-align: center;
+    color: #787878;
+  }
+}

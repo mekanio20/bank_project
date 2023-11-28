@@ -1,0 +1,140 @@
+.contacts {
+  @include adaptiv-value("padding-top", 60, 30, 1);
+  @include adaptiv-value("padding-bottom", 100, 50, 1);
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__titler {
+    font-weight: 500;
+    line-height: 79%;
+    color: #333333;
+    @include adaptiv-value("font-size", 64, 24, 1);
+    @include adaptiv-value("padding-bottom", 60, 30, 1);
+  }
+
+  &__body {
+    width: 100%;
+    display: flex;
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__map {
+    width: 50%;
+    margin-right: 60px;
+    @include adaptiv-value("margin-right", 60, 30, 1);
+    @media (max-width: 768px) {
+      width: 100%;
+      margin-right: 0;
+      @include adaptiv-value("margin-bottom", 30, 15, 1);
+    }
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__form-box {
+    width: calc(620px / 1400px) * 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+  }
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 20px;
+    @media (max-width: 900px) {
+      flex-direction: column;
+      column-gap: 0;
+      row-gap: 20px;
+    }
+  }
+  &__input-box {
+    width: calc(50% - 10px);
+    @media (max-width: 900px) {
+      width: 100%;
+    }
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    /* Firefox */
+    input[type="number"] {
+      -moz-appearance: textfield;
+    }
+  }
+
+  &__label {
+    font-weight: 400;
+    @include adaptiv-value("font-size", 20, 16, 1);
+    @include adaptiv-value("line-height", 23, 18, 1);
+    color: #333333;
+    margin-bottom: 6px;
+    display: block;
+  }
+
+  &__input {
+    width: 100%;
+    border: 2px solid #333333;
+    border-radius: 4px;
+    //inputyn icinin font y nahili bolmalydygy belli dal
+    font-weight: 400;
+    @include adaptiv-value("font-size", 20, 16, 1);
+    @include adaptiv-value("line-height", 23, 18, 1);
+    color: #333333;
+    padding: 10px 2px;
+  }
+
+  &__input-box--mail {
+    width: 100%;
+  }
+
+  &__textarea-box {
+    width: 100%;
+    textarea {
+      padding: 10px 4px;
+      border: 2px solid #333333;
+      border-radius: 4px;
+      width: 100%;
+      resize: none;
+      height: 150px;
+      font-weight: 400;
+      @include adaptiv-value("font-size", 20, 16, 1);
+      @include adaptiv-value("line-height", 23, 18, 1);
+      color: #333333;
+    }
+  }
+
+  &__button-box {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  &__button {
+    @extend .sun-fze-article-magro__button;
+    padding: 8px 16px;
+    @include adaptiv-value("padding-top", 10, 8, 1);
+    @include adaptiv-value("padding-bottom", 10, 8, 1);
+    @include adaptiv-value("padding-left", 30, 15, 1);
+    @include adaptiv-value("padding-right", 30, 15, 1);
+  }
+}

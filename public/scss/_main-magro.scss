@@ -1,0 +1,58 @@
+.main-magro {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  position: relative;
+  &__wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__title {
+    max-width: calc(1150px / 1430px) * 100%;
+    font-weight: 700;
+    @include adaptiv-value("font-size", 64, 14, 1);
+    @include adaptiv-value("line-height", 75, 16, 1);
+    color: #ffffff;
+  }
+
+  &__subtitle {
+    position: absolute;
+    bottom: 0;
+    background: #d7e4fa;
+    @include adaptiv-value("padding-top", 20, 10, 1);
+    @include adaptiv-value("padding-bottom", 20, 10, 1);
+    font-weight: 400;
+    @include adaptiv-value("font-size", 24, 10, 1);
+    @include adaptiv-value("line-height", 28, 12, 1);
+    color: #333333;
+    cursor: pointer;
+  }
+}
